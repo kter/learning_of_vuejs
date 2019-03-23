@@ -1,5 +1,4 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="script.js"></script>
 
 <div id="app">
     {{ message }}
@@ -11,3 +10,9 @@
     to see my dynamically bound title!
   </span>
 </div>
+
+<div id="app-3">
+    <span v-if="seen">Now you see me</span>
+</div>
+
+<script src="script.js"></script>
