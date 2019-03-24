@@ -1,0 +1,33 @@
+<!-- v-once ディレクティブを使用することで、データ変更時の更新はおこなわず、一度だけ展開することができます。-->
+<span v-once>This will never change: {{ msg }}</span>
+
+<!-- 2重中括弧の mustaches は、データを HTML ではなく、プレーンなテキストとして扱います。実際の HTML として出力するためには、v-html ディレクティブを使用する必要があります-->
+<p>Using mustaches: {{ rawHtml }}</p>
+<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+
+<!-- Mustache は、HTML 属性の内部で使用することはできません。代わりに、v-bind ディレクティブを使用してください-->
+<div v-bind:id="dynamicId"></div>
+<!--属性が単に存在していることを true と示すといった真偽値属性の場合、v-bind は少し異なった働きをします。この例では： -->
+<button v-bind:disabled="isButtonDisabled">Button</button>
+
+<!-- JavaScript式を単一の式のみ完全にサポート。またMath, Dateのみアクセスできる-->
+{{ number + 1 }}
+{{ ok ? 'YES' : 'NO' }}
+{{ message.split('').reverse().join('') }}
+<div v-bind:id="'list-' + id"></div>
+<p v-if="seen">Now you see me</p>
+
+<!-- 引数はコロンを使って渡す-->
+<a v-bind:href="url"> ... </a>
+<a v-on:click="doSomething"> ... </a>
+<!-- 動的引数といって、attributeNameにJavaScript式を指定できる。(attributeName = 'hrefの場合、v-bind:[attributeName]はv-bind:hrefと等価-->
+<a v-bind:[attributeName]="url"> ... </a>
+
+<!-- 省略記法 -->
+<a v-bind:href="url"> ... </a>
+<a :href="url"> ... </a>
+<a :[key]="url"> ... </a>
+<!-- 省略記法 -->
+<a v-on:click="doSomething"> ... </a>
+<a @click="doSomething"> ... </a>
+<a @[event]="doSomething"> ... </a>
