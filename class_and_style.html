@@ -8,4 +8,13 @@
 ></div>
 </div>
 
+<div id="hoge2">
+<div v-bind:class="[activeClass, errorClass]"></div>
+</div>
+
+<!-- 条件によって複数のクラスを適用する-->
+<div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
+<div v-bind:class="[{ active: isActive }, errorClass]"></div>
+
+
 <script src="class_and_style.js"></script>

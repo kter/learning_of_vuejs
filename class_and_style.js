@@ -6,3 +6,12 @@ var vm = new Vue({
         hasError: false
     }
 });
+
+// 配列でクラスを渡すこともできる
+var vm2 = new Vue({
+    el: "#hoge2",
+    data: {
+        activeClass: 'active',
+        errorClass: 'text-danger'
+      }
+});
