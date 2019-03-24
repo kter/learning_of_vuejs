@@ -1,0 +1,11 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="hoge">
+<div v-bind:class="{ active: isActive }"></div>
+<div
+  class="static"
+  v-bind:class="{ active: isActive, 'text-danger': hasError }"
+></div>
+</div>
+
+<script src="class_and_style.js"></script>
