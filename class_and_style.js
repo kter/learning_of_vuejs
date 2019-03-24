@@ -15,3 +15,21 @@ var vm2 = new Vue({
         errorClass: 'text-danger'
       }
 });
+
+var vm3 = new Vue({
+    el: "#hoge3",
+    data: {
+        activeColor: 'red',
+        fontSize: 30
+    }
+});
+
+var vm4 = new Vue({
+    el: "#hoge4",
+    data: {
+        styleObject: {
+          color: 'red',
+          fontSize: '13px'
+        }
+    }
+});

@@ -16,5 +16,11 @@
 <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
 <div v-bind:class="[{ active: isActive }, errorClass]"></div>
 
+<div id="hoge3">
+<div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+</div>
+<div id="hoge4">
+<div v-bind:style="styleObject"></div>
+</div>
 
 <script src="class_and_style.js"></script>
