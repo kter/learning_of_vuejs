@@ -3,4 +3,11 @@
 <h1 v-if="awesome">Vue is awesome!</h1>
 <h1 v-else>Oh no 😢</h1>
 
+<!-- 非描画要素のtemplateを使うと多数の要素に対してifできる-->
+<template v-if="ok">
+    <h1>Title</h1>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+</template>
+
 <script src="conditional.js"></script>
