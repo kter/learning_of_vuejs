@@ -12,4 +12,25 @@
     </li>
 </ul>
 
+<!-- オブジェクトのfor-->
+<ul id="v-for-object" class="demo">
+    <li v-for="value in object">
+        {{ value }}
+    </li>
+</ul>
+
+<!-- オブジェクトのkey-->
+<div id="v-for-key">
+    <div v-for="(value, key) in object">
+        {{ key }}: {{ value }}
+    </div>
+</div>
+
+<!-- オブジェクトのindex-->
+<div id="v-for-index">
+    <div v-for="(value, key, index) in object">
+        {{ index }}. {{ key }}: {{ value }}
+    </div>
+</div>
+
 <script src="list.js"></script>
