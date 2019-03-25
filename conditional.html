@@ -30,4 +30,20 @@
 <div v-else>
     Not A/B/C
 </div>
+
+<!--keyを追加することで入力した値が再利用されないようにする-->
+<template v-if="loginType === 'username'">
+    <label>Username</label>
+    <input placeholder="Enter your username" key="username-input">
+</template>
+<template v-else>
+    <label>Email</label>
+    <input placeholder="Enter your email address" key="email-input">
+</template>
+
+<!-- ifの代わりにshowでもOK。-->
+<!-- 高頻繁に何かを切り替える必要があれば v-show を選び、条件が実行時に変更することがほとんどない場合は、v-if を選びます。-->
+<h1 v-show="ok">Hello!</h1>
+
+
 <script src="conditional.js"></script>
