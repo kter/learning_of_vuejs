@@ -51,3 +51,43 @@ var example5 = new Vue({
         }
     }
 });
+
+// JavaScript の制約のため、Vue はプロパティの追加や削除を検出することはできません。
+var vm = new Vue({
+    data: {
+      a: 1
+    }
+  })
+  // `vm.a` はリアクティブです
+  
+  vm.b = 2
+  // `vm.b` はリアクティブではありません
+
+
+var vm2 = new Vue({
+    el: '#filter',
+    data: {
+        numbers: [1, 2, 3, 4, 5]
+    },
+    computed: {
+        evenNumbers: function () {
+            return this.numbers.filter(function (number) {
+                return number % 2 === 0
+            })
+        }
+    }
+});
+
+var vm3 = new Vue({
+    el: '#filter2',
+    data: {
+        numbers: [ 1, 2, 3, 4, 5 ]
+      },
+      methods: {
+        even: function (numbers) {
+          return numbers.filter(function (number) {
+            return number % 2 === 0
+          })
+        }
+      }
+});
