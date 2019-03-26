@@ -37,4 +37,8 @@
 <!-- スクロールイベントのデフォルトの挙動(つまりスクロール)は -->
 <!-- イベントの完了を待つことなくただちに発生するようになります -->
 <div v-on:scroll.passive="onScroll">...</div>
+
+<!-- ハンドラは $event.key が 'PageDown' に等しい場合だけ呼ばれます。-->
+<input v-on:keyup.page-down="onPageDown">
+
 <script src="events.js"></script>
